@@ -43,7 +43,7 @@ var emailsToValidate = []SingleTest{
 	{Email: "role_based_catch_all@example.com", Status: "do_not_mail", SubStatus: "role_based_catch_all"},
 }
 
-func TestIfIsDisposable(t *testing.T) {
+func TestValidate(t *testing.T) {
 
 	APIKey = KEY
 
