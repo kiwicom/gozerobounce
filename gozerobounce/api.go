@@ -53,7 +53,10 @@ func (v *ValidateResponse) IsDisposable() bool {
 
 // IsValid checks if an email is valid
 func (v *ValidateResponse) IsValid() bool {
-	return strings.Contains(v.Status, "valid")
+	if v.Status == "valid" {
+		return true
+	}
+	return false
 }
 
 // PrepareURL prepares the URL

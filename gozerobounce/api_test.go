@@ -30,6 +30,16 @@ func TestIfIsValid(t *testing.T) {
 	}
 
 	if !resp.IsValid() {
-		t.Errorf("Email " + email + "should not be disposable")
+		t.Errorf("Email " + email + "should be valid")
+	}
+
+	email = "invalid@example.com"
+	resp, err = Validate(email, "99.110.204.1")
+	if err != nil {
+		t.Errorf(err.Error())
+	}
+
+	if resp.IsValid() {
+		t.Errorf("Email " + email + "should not be valid")
 	}
 }
