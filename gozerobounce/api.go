@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"strings"
 )
 
 // URI URL for the requests
@@ -44,16 +43,6 @@ type ValidateResponse struct {
 	City          string      `json:"city"`
 	Zipcode       string      `json:"zipcode"`
 	ProcessedAt   string      `json:"processed_at"`
-}
-
-// IsDisposable checks if an email is disposable
-func (v *ValidateResponse) IsDisposable() bool {
-	return strings.Contains(v.SubStatus, "disposable")
-}
-
-// IsFreeEmail checks if an email comes from a free provider
-func (v *ValidateResponse) IsFreeEmail() bool {
-	return v.FreeEmail
 }
 
 // IsValid checks if an email is valid

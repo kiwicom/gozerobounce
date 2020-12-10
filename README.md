@@ -27,19 +27,14 @@ func main() {
     // IP can also be an empty string
     response := gozerobounce.Validate("email@example.com", "123.123.123.123")
 
-    // You can check in the response the different attributes, 
-    // or use methods like those:
-
-    if response.IsDisposable() {
-        fmt.Println("This E-mail is disposable")
+    // Now you can check status
+    if response.Status == "valid" {
+        fmt.Println("This email is valid")
     }
 
-    if response.IsValid() {
-        fmt.Println("This E-mail is valid")
-    }
-
-    if response.IsFreeEmail() {
-        fmt.Println("This E-mail comes from a free provider")
+    // .. or Substatus
+    if response.SubStatus == "disposable" {
+        fmt.Println("This email is disposable")
     }
 
     // You can also check your credits 
