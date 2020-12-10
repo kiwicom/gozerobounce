@@ -38,6 +38,10 @@ func main() {
         fmt.Println("This E-mail is valid")
     }
 
+    if response.IsFreeEmail() {
+        fmt.Println("This E-mail comes from a free provider")
+    }
+
     // You can also check your credits 
     credits := gozerobounce.GetCredits()
     fmt.Println("Credits left:", credits.Credits)

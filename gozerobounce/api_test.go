@@ -43,3 +43,18 @@ func TestIfIsValid(t *testing.T) {
 		t.Errorf("Email " + email + "should not be valid")
 	}
 }
+
+func TestIfIsFreeEmail(t *testing.T) {
+
+	APIKey = KEY
+
+	email := "free_email@example.com"
+	resp, err := Validate(email, "99.110.204.1")
+	if err != nil {
+		t.Errorf(err.Error())
+	}
+
+	if !resp.IsFreeEmail() {
+		t.Errorf("Email " + email + "should be free email")
+	}
+}

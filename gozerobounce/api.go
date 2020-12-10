@@ -51,6 +51,11 @@ func (v *ValidateResponse) IsDisposable() bool {
 	return strings.Contains(v.SubStatus, "disposable")
 }
 
+// IsFreeEmail checks if an email comes from a free provider
+func (v *ValidateResponse) IsFreeEmail() bool {
+	return v.FreeEmail
+}
+
 // IsValid checks if an email is valid
 func (v *ValidateResponse) IsValid() bool {
 	if v.Status == "valid" {
