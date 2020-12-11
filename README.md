@@ -1,5 +1,5 @@
 # GoZeroBounce
-Go implementation for [ZeroBounce Email Validation API](https://www.zerobounce.net/docs/email-validation-api-quickstart/) 
+Go implementation for [ZeroBounce Email Validation API v2](https://www.zerobounce.net/docs/email-validation-api-quickstart/) 
 
 THIS PROJECT IS STILL IN DEVELOPMENT!
 
