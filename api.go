@@ -104,8 +104,6 @@ func Validate(email string, IPAddress string) (*ValidateResponse, error) {
 func GetCredits() (*CreditsResponse, error) {
 
 	response := &CreditsResponse{}
-
-	// Do the request
 	err := DoRequest(PrepareURL("getcredits", url.Values{}), response)
 	return response, err
 }
