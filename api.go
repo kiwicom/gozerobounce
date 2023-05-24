@@ -9,7 +9,7 @@ import (
 )
 
 // URI URL for the requests
-const URI = `https://api.zerobounce.net/v2/`
+const URI = `https://api.zerobounce.net/v2`
 
 // APIKey Key to be used in requests
 var APIKey string
@@ -91,7 +91,9 @@ func Validate(email string, IPAddress string) (*ValidateResponse, error) {
 	// Prepare the parameters
 	params := url.Values{}
 	params.Set("email", email)
-	params.Set("ip_address", IPAddress)
+	if len(IPAddress) > 0 {
+		params.Set("ip_address", IPAddress)
+	}
 
 	response := &ValidateResponse{}
 
