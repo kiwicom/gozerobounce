@@ -5,7 +5,7 @@ THIS PROJECT IS STILL IN DEVELOPMENT!
 
 ## Installation and Usage
 ```sh
-go get github.com/antsanchez/gozerobounce
+go get github.com/kiwicom/gozerobounce
 ```
 
 You can use it like this:
@@ -16,7 +16,7 @@ import (
     "fmt"
     "os"
 
-    "github.com/antsanchez/gozerobounce"
+    "github.com/kiwicom/gozerobounce"
 )
 
 func main() {
@@ -45,4 +45,4 @@ func main() {
 
 ## Already implemented
 - Validate single email
-- Get gredits
+- Get credits
