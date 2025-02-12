@@ -43,6 +43,7 @@ type ValidateResponse struct {
 	City          string      `json:"city"`
 	Zipcode       string      `json:"zipcode"`
 	ProcessedAt   string      `json:"processed_at"`
+	Error         string      `json:"error"`
 }
 
 // IsValid checks if an email is valid
